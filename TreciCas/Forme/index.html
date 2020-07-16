@@ -4,15 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forme</title>
+    <style>
+        label {
+            display: inline-block; 
+            width: 150px;
+        }
+    </style>
 </head>
 <body>
     <form action="">
         <fieldset>
             <legend>Podaci o ispitaniku</legend>
+
+            <label>Ime: </label>
+            <input type="text" value="Ana"> <br> <br>
+            <label>Prezime: </label>
+            <input type="text" placeholder="Antic"> <br> <br>
+            <label>Skola: </label>
+            <input type="text" value="ITBootcamp" disabled> <br> <br>
+
+            <label>Sifra: </label>
+            <input type="password"> <br> <br>
+
+            <label>Godina rodjenja: </label>
+            <input type="number" min="1920" max="2020" step="1"> <br> <br>
+
+            <label>Unesite datum putovanja: </label>
+            <input type="date" min="2020-06-01" max="2020-09-01" step="7"> <br><br>
+
+            <label>Odaberite pol:</label>
+            <input type="radio" name="pol" id="" checked>Neopredeljen
+            <input type="radio" name="pol" id="">Muski
+            <input type="radio" name="pol" id="">Zenski <br> <br>
+
+            <label>Moje vestine:</label>
+            <input type="checkbox" name="vestine" id="">HTML
+            <input type="checkbox" name="vestine" id="">CSS
+            <input type="checkbox" name="vestine" id="" checked>JS <br><br>
+
+            <label>Vas CV:</label>
+            <input type="file" name="">
+            
+
         </fieldset>
         <fieldset>
             <legend>Ostale informacije</legend>
+
+            <label>Odaberite kurs:</label>
+            <select name="" id="">
+                <optgroup label="Nis">
+                    <option value="">PHP</option>
+                    <option value="">JS</option>
+                    <option value="">QA</option>
+                </optgroup>
+                <optgroup label="Beograd">
+                    <option value="">QA</option>
+                    <option value="">JS</option>
+                    <option value="">Java</option>
+                </optgroup>
+            </select>
         </fieldset>
+
+        <input type="submit" value="Posalji" onclick="alert('zdravo :)')">
+        <input type="reset" value="Resetuj">
+        <button></button>
+
     </form>
 </body>
 </html>
