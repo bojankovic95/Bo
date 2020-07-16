@@ -1,0 +1,31 @@
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+td, tr, th {
+    border: solid 1px gray;
+}
+
+td, th {
+    padding: 5px;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.mail {
+    background-color: yellow;
+}
+/*DO NOT Forget :nth-child() */
+
+#drugatabela tr:nth-child(even):hover {
+    background-color: yellow;
+    color: blue;
+}
+
+#prvatabela tr:nth-child(odd) {
+    font-style: italic;
+}

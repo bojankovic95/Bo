@@ -1,0 +1,17 @@
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+td, tr, th {
+    border: solid 1px gray;
+}
+
+td, th {
+    padding: 5px;
+}
+
+.mail {
+    background-color: yellow;
+}
