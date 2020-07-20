@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prijava</title>
+    <style>
+        .input {
+            width: 97%;
+            margin-top: 10px;
+            padding: 10px;
+            
+        }
+        #button {
+            background-color: orange;
+            border-style: none;
+            color: white;
+            width: 100px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">Nazad na pocetnu</a>
+    <form action="">
+        <fieldset>
+            <legend>Informacije o kandidatu</legend>
+            <label for="">Ime:</label><br>
+            <input type="text" class="input"><br> <br>
+            <label for="">Prezime:</label><br>
+            <input type="text" class="input">
+        </fieldset>
+        <fieldset>
+            <legend>Informacije o kursu</legend>
+            <label for="">Mesto:</label><br>
+            <select name="" id="" class="input">
+                <option value="Nis">Nis</option>
+                <option value="Beograd">Beograd</option> 
+            </select> <br> <br>
+            <label for="">Kurs:</label>
+            <input type="radio"> Javascript
+            <input type="radio"> QA
+        </fieldset>
+        <input type="checkbox" checked>
+        <label for="">Zelim da se prijavim na newsletter</label> <br> <br>
+
+        <input type="button" value="Prijavi se" id="button">
+    </form>
+</body>
+</html>
