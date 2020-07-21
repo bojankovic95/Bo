@@ -1,0 +1,180 @@
+
+h1 {
+    text-align: center;
+    background-color: rgb(9, 202, 183);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*obavezan*/
+}
+/*Mobili*/
+[class*="col-"]{
+    width: 100%;
+    padding: 15px;
+
+}
+@media only screen and (max-width: 650px) {
+
+.col-1 {
+    width: 8.33%;
+}
+ul {
+    text-align: center;
+}
+li {
+    height: 30px;
+}
+.col-2 {
+    width: 16.66%;
+}
+.col-3 {
+    width: 100%;
+    background-color: turquoise;
+    list-style-type: none;
+}
+.col-4 {
+    width: 100%;
+    height: 300pxpx;
+    padding: 0;
+}
+.col-5 {
+    width: 41.66%;
+}
+.col-6 {
+    width: 100%;
+    background-image: linear-gradient(turquoise, white);
+
+}
+.col-7 {
+    width: 58.33%;
+}
+.col-8 {
+    width: 66.66%;
+}
+.col-9 {
+    width: 100%;
+    background-image: linear-gradient(turquoise, white);
+}
+.col-10 {
+    width: 83.33%;
+}
+.col-11 {
+    width: 91.66%;
+}
+.col-12 {
+    width: 100%;
+    text-align: center;
+    background-color: turquoise;
+}  
+}
+
+
+/*tablet*/
+@media only screen and (min-width: 650px) and (max-width: 950px){
+    [class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.colt-1 {
+    width: 8.33%;
+}
+.colt-2 {
+    width: 16.66%;
+}
+.colt-3 {
+    width: 25%;
+}
+.colt-4 {
+    width: 33.32%;
+}
+.colt-5 {
+    width: 41.66%;
+}
+.colt-6 {
+    width: 50%;
+}
+.colt-7 {
+    width: 58.33%;
+}
+.colt-8 {
+    width: 66.66%;
+}
+.colt-9 {
+    width: 75%;
+}
+.colt-10 {
+    width: 83.33%;
+}
+.colt-11 {
+    width: 91.66%;
+}
+.colt-12 {
+    width: 100%;
+} 
+}
+
+/*Desktop*/
+@media only screen and (min-width: 950px){
+
+/*selektovanje svih elemenata sa prefiksom col-*/
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+ul {
+    text-align: center;
+}
+li {
+    height: 30px;
+    width: 100%;
+}
+.col-1 {
+    width: 8.33%;
+}
+.col-2 {
+    width: 16.66%;
+}
+.col-3 {
+    width: 25%;
+    list-style-type: none;
+    height: 100px;
+    background-image: linear-gradient(turquoise, white);
+}
+.col-4 {
+    width: 33.32%;
+    height: 250px;
+    padding: 0;
+}
+.col-5 {
+    width: 41.66%;
+}
+.col-6 {
+    width: 50%;
+    background-image: linear-gradient(turquoise, white);
+    height: 100px;
+
+}
+.col-7 {
+    width: 58.33%;
+}
+.col-8 {
+    width: 66.66%;
+}
+.col-9 {
+    width: 75%;
+    background-image: linear-gradient(turquoise, white);
+}
+.col-10 {
+    width: 83.33%;
+}
+.col-11 {
+    width: 91.66%;
+}
+.col-12 {
+    width: 100%;
+    text-align: center;
+    background-color: turquoise;
+} 
+
+}

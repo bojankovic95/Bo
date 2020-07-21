@@ -1,0 +1,121 @@
+header {
+    background-color: blue;
+}
+nav {
+    background-color: blueviolet;
+}
+section {
+    background-color: burlywood;
+}
+aside {
+    background-color: cadetblue;
+}
+footer {
+    background-color: chartreuse;
+}
+h1 {
+    background-color: turquoise;
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*obavezan*/
+}
+/*Mobili*/
+[class*="col-"]{
+    width: 100%;
+    padding: 15px;
+}
+/*tablet*/
+@media only screen and (min-width: 650px) and (max-width: 950px){
+    [class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.colt-1 {
+    width: 8.33%;
+}
+.colt-2 {
+    width: 16.66%;
+}
+.colt-3 {
+    width: 25%;
+}
+.colt-4 {
+    width: 33.32%;
+}
+.colt-5 {
+    width: 41.66%;
+}
+.colt-6 {
+    width: 50%;
+}
+.colt-7 {
+    width: 58.33%;
+}
+.colt-8 {
+    width: 66.66%;
+}
+.colt-9 {
+    width: 75%;
+}
+.colt-10 {
+    width: 83.33%;
+}
+.colt-11 {
+    width: 91.66%;
+}
+.colt-12 {
+    width: 100%;
+} 
+}
+
+/*Desktop*/
+@media only screen and (min-width: 950px){
+
+/*selektovanje svih elemenata sa prefiksom col-*/
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+.col-2 {
+    width: 16.66%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-4 {
+    width: 33.32%;
+}
+.col-5 {
+    width: 41.66%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-7 {
+    width: 58.33%;
+}
+.col-8 {
+    width: 66.66%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-10 {
+    width: 83.33%;
+}
+.col-11 {
+    width: 91.66%;
+}
+.col-12 {
+    width: 100%;
+} 
+
+}
