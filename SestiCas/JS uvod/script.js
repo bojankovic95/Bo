@@ -58,3 +58,6 @@ console.log(fullname);
 console.log("Vrednost promenljive x je: " + x);
 
 console.log(`Vrednost promenljive x je: &{x}`);
+
+god = 18; 
+console.log(`Imam god godina`);

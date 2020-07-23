@@ -98,9 +98,6 @@ keltocel = kelvin - 273.15;
 
 console.log(keltocel);
 
-god = 18;  
-console.log(`Imam god godina`);
-
 
 
 
