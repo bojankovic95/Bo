@@ -98,6 +98,7 @@ let dan = {
             }
         });
         return counter;
+
     },
     makstemp: function(){
 

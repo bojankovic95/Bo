@@ -121,6 +121,7 @@ users.forEach(user =>{
             console.log(blog.title);
         }
     });
+    console.log(userBlogs);
 });
 
 //USERNAME STEFAN
