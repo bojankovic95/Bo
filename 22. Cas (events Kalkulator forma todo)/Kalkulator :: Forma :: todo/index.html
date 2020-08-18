@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kalkulator</title>
+</head>
+<body>
+
+    <form>
+        <fieldset>
+            <legend>Kalkulator</legend>
+
+                <label>Prvi broj:</label>
+                <input type="text" id="num1" value="0">
+                <br><br>
+
+                <label>Drugi broj:</label>
+                <input type="text" id="num2" value="0">
+                <br><br>
+
+                <input type="radio" name="btn" value ="+" checked> +
+                <input type="radio" name="btn" value="-"> -
+                <input type="radio" name="btn" value="*"> *
+                <input type="radio" name="btn" value="/"> /
+                <br><br>
+
+                <input type="submit" value="Izracunaj" id="button">
+        </fieldset>
+    </form>
+
+    <p id="res"></p>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
