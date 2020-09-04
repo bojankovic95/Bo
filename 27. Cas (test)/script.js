@@ -89,3 +89,32 @@ getKorisnici((error, data)=>{
         console.log(counter);
     }
 })
+
+let getKorisnici1 = callback => {
+    let req = new XMLHttpRequest();
+    req.addEventListener("readystatechange", () => {
+        if (req.readyState === 4 && req.status === 200) { //ako je sve u redu
+            let data = JSON.parse(req.responseText); //data kao niz objekata
+            callback(undefined, data);   //prvi parametar koji prima je greska drugi su podaci 
+        } else if (req.readyState === 4) {
+            callback("Server nije u mogucnosti da obradi zahtev!", undefined);
+        }
+    });
+
+
+    req.open("GET", "http://localhost:3000/sportisti");
+    req.send();
+}
+getKorisnici1((error, data) => {
+    if (error) {
+        console.log(error);
+    } else {
+        let counter = 0;
+        data.forEach(user => {
+            if (user.visina > 2) {
+                counter++;
+            }
+        });
+        console.log(counter);
+    }
+})

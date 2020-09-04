@@ -36,7 +36,6 @@ br.forEach(br =>{
             alert(`Kraj igre, trazeni broj je ${randBr}`);
             brojevi = [];
             location.reload();
-            localStorage.setItem("brojigre", Number(brojigara + 1));
 
         }
         else if(randBr == br.innerHTML){
@@ -44,7 +43,6 @@ br.forEach(br =>{
             alert(`Cestitamo! Trazeni broj je ${br.innerHTML}`)
             console.log(br);
             location.reload();
-            localStorage.setItem("brojigre", Number(brojigara + 1));
         }
     })
 })
