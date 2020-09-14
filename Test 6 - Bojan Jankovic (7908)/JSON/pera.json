@@ -1,0 +1,20 @@
+[
+    {
+        "naziv": "JS",
+        "datum": "2020/09/14",
+        "ocena": "10",
+        "nastavnik": "Petar Vujic"
+    },
+    {
+        "naziv": "CSS",
+        "datum": "2020/10/17",
+        "ocena": "9",
+        "nastavnik": "Jelena Matejic"
+    },
+    {
+        "naziv": "HTML",
+        "datum": "2020/11/20",
+        "ocena": "8",
+        "nastavnik": "Stefan Stanimirovic"
+    }
+]
