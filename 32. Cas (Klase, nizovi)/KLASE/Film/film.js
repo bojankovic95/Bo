@@ -1,8 +1,9 @@
 export class Film {
-    constructor(nas, rez, godIzd){
+    constructor(nas, rez, godIzd, o){
         this.naslov = nas;
         this.reziser = rez;
         this.godIzdanja = godIzd;
+        this.ocene = o;
     }
 
     //seteri
@@ -19,6 +20,9 @@ export class Film {
             alert ("Greska");
         }
     }
+    set ocene(o){
+        this._ocene = o;
+    }
     
     //geteri
     get naslov(){
@@ -30,8 +34,19 @@ export class Film {
     get godIzdanja(){
         return this._godIzdanja;
     }
+    get ocene(){
+        return this._ocene;
+    }
 
     stampaj(){
         console.log(this.naslov);
+    }
+
+    prosek(){
+        let sum = 0;
+        this.ocene.forEach(o => {
+            sum += o;
+        });
+        return sum/this.ocene.length;
     }
 }

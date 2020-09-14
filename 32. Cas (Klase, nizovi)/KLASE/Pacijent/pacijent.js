@@ -39,7 +39,6 @@ export class Pacijent {
 
     bmi(){
         let Bmi = this.tezina/(this.visina)**2;
-        console.log(Bmi);
     }
 
     kritican(){
