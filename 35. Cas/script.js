@@ -112,7 +112,7 @@ db.collection("customers").orderBy('name', 'desc').get()
 .then(snapshot =>{
     if(!snapshot.empty){
         snapshot.docs.forEach(doc =>{
-            console.log(doc.data());
+           // console.log(doc.data());
         })
     }else{
         console.log("error");
@@ -131,7 +131,7 @@ db.collection("customers")
 .then(snapshot => {
     if (!snapshot.empty) {
         snapshot.docs.forEach(doc => {
-            console.log(doc.data());
+            //console.log(doc.data());
         })
     } else {
         console.log("error");
@@ -152,13 +152,168 @@ db.collection("customers")
     .then(snapshot => {
         if (!snapshot.empty) {
             snapshot.docs.forEach(doc => {
-                console.log(doc.data());
+                //console.log(doc.data());
             })
         } else {
-            console.log("error");
+            //console.log("error");
         }
     })
     .catch(error => {
-        console.log("Error")
+        //console.log("Error")
     })
 
+//Procitati klijente koji imaju odredjenu adresu
+
+db.collection('customers')
+.where("address", 'array-contains', 'Ulica1')
+.get()
+.then(snapshot =>{
+    if(!snapshot.empty){
+        snapshot.docs.forEach(doc =>{
+            //console.log(doc.data())
+        })
+    }else{
+        //console.log("No documents to retrieve.")
+    }
+})
+.catch(err =>{
+    //console.log(`Error getting documents ${err}`)
+})
+
+//plata veca ili jednaka 500
+db.collection('customers')
+    .where("salary", '>=', 500)
+    .get()
+    .then(snapshot => {
+        if (!snapshot.empty) {
+            snapshot.docs.forEach(doc => {
+                //console.log(doc.data())
+            })
+        } else {
+            console.log("No documents to retrieve.")
+        }
+    })
+    .catch(err => {
+        console.log(`Error getting documents ${err}`)
+    })
+
+//plata izmedju 300 i 800 
+db.collection('customers')
+    .where('salary', '>=', 300)
+    .where('salary', '<=', 800)
+    .get()
+    .then(snapshot => {
+        if (!snapshot.empty) {
+            snapshot.docs.forEach(doc => {
+               // console.log(doc.data())
+            })
+        } else {
+            console.log("No documents to retrieve.")
+        }
+    })
+    .catch(err => {
+        console.log(`Error getting documents ${err}`)
+    })
+
+//plata manja od 900 i imaju 30 godina 
+db.collection('customers')
+    .where('salary', '<=', 900)
+    //.where('age', '=', 30 )
+    .get()
+    .then(snapshot => {
+        if (!snapshot.empty) {
+            snapshot.docs.forEach(doc => {
+                //console.log(doc.data())
+            })
+        } else {
+            console.log("No documents to retrieve.")
+        }
+    })
+    .catch(err => {
+        console.log(`Error getting documents ${err}`)
+    })
+
+//koji zive na barem jednoj od te dve adrese 
+db.collection('customers')
+    .where("address", 'array-contains-any', ['Ulica1', 'Ulica2'])
+    .limit(1)
+    .get()
+    .then(snapshot => {
+        if (!snapshot.empty) {
+            snapshot.docs.forEach(doc => {
+                //console.log(doc.data())
+            })
+        } else {
+            console.log("No documents to retrieve.")
+        }
+    })
+    .catch(err => {
+        console.log(`Error getting documents ${err}`)
+    })
+
+//procitati sve klijente koji imaju 22, 25 ili 28 godina 
+
+db.collection('customers')
+    .where("age", 'in', [22, 30])
+    .limit(1)
+    .get()
+    .then(snapshot => {
+        if (!snapshot.empty) {
+            snapshot.docs.forEach(doc => {
+                //console.log(doc.data())
+            })
+        } else {
+            console.log("No documents to retrieve.")
+        }
+    })
+    .catch(err => {
+        console.log(`Error getting documents ${err}`)
+    })
+
+db.collection('tasks')
+//.orderBy('title', 'asc')
+.where('priority', '==', false)
+.get()
+.then(snapshot =>{
+    if(!snapshot.empty){
+        snapshot.docs.forEach(doc =>{
+            console.log(doc.data())
+        })
+    }else{
+        console.log("No document")
+    }
+})
+.catch(err =>{
+    console.log(`${err}`)
+})
+
+
+//zadaci koji treba da se izvrse u tekucpj godini
+let now = new Date();
+//let tekucaGodina = now.getFullYear();
+//let datum1 = new Date(tekucaGodina, 0, 1); //1. januar 2020.
+//let datum2 = new Date(tekucaGodina + 1, 0, 1); //1. januar 2021.
+//let datum1Timestamp = firebase.firestore.Timestamp.fromDate(datum1);
+//let datum2Timestamp = firebase.firestore.Timestamp.fromDate(datum2);
+
+let datumTimestamp = firebase.firestore.Timestamp.fromDate(now);
+
+db.collection('tasks')
+    .where('duedate', '<=', datumTimestamp)
+    //.where('duedate', '<', datum2Timestamp)
+    .get()
+    .then(snapshot => {
+        if (!snapshot.empty) {
+            snapshot.docs.forEach(doc => {
+                console.log(doc.data().title)
+            })
+        } else {
+            //console.log("No document")
+        }
+    })
+    .catch(err => {
+        //console.log(`${err}`)
+    })
+
+
+//procitati sve zadatke koji su zavrseni 
